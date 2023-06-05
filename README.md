@@ -6,4 +6,4 @@
 <img src="./src/images/Jazzy Landing Page.png" width="80%"/>
 
 ## Mobile view 
-<img src="./src/images/Jazzy Landing Page.png" width="80%"/>
+<img src="./src/images/Jazzy Landing Page Mobile.png" width="80%"/>
