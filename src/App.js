@@ -1,23 +1,62 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from "react";
+import data from "./ProductStore";
+import Card from "./component/Card";
+import background1 from "./assets/background/image 4.png";
 function App() {
+  const [products, setProducts] = useState(data);
+
+  const handleIncrease = (id) => {
+    const newProducts = products.map((product) => {
+      if (product.id === id) {
+        product.count++;
+      }
+      return product;
+    });
+    setProducts(newProducts);
+  };
+
+  const handleReduce = (id) => {
+    const newProducts = products.map((product) => {
+      if (product.id === id && product.count > 1) {
+        product.count--;
+      }
+      return product;
+    });
+    setProducts(newProducts);
+  };
+
+  const toCartButton = (id) => {
+    const newProducts = products.map((product) => {
+      if (product.id === id) {
+        product.cart = !product.cart;
+      }
+      return product;
+    });
+    setProducts(newProducts);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main className="main-section">
+        <div className="hero-section">
+          <img
+            src={background1}
+            alt="backgroung-img"
+            className="img-fluid"
+          ></img>
+        </div>
+        <div className="card-con">
+          {products.map((product) => (
+            <Card
+              product={product}
+              key={product.id}
+              handleIncrease={handleIncrease}
+              handleReduce={handleReduce}
+              toCartButton={toCartButton}
+            />
+          ))}
+        </div>
+      </main>
     </div>
   );
 }
