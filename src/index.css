@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +12,195 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.card {
+  font-family: "open sans";
+  width: 30%;
+  position: relative;
+  border-radius: 20px;
+  margin-bottom: 3%;
+}
+
+.card-title {
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 11px;
+  margin-bottom: 5%;
+  margin-top: 2%;
+}
+
+.card-body {
+  padding: 6px;
+}
+
+.price {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 15px;
+  color: #878787;
+  margin-bottom: 7%;
+}
+
+.price-tag {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 23px;
+  color: #000000;
+  margin: 0;
+}
+
+
+
+.counter {
+  background: rgba(225, 186, 186, 0.75);
+  border-radius: 5px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5% 2%;
+}
+
+.counter button {
+  background: rgba(255, 255, 255, 0.63);
+  border-radius: 5px;
+  display: block;
+  padding: 0px 10px;
+  border: 0;
+  color: #F31D1D;
+  ;
+}
+
+.counter button:nth-child(1) {
+  padding: 0 12px;
+}
+
+.counter label {
+  font-size: 20px;
+  line-height: 10px;
+}
+
+
+.img-gallery {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 7% 0;
+}
+
+.img-gallery img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+
+.cart-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #F31D1D;
+  border-radius: 10px;
+  border: 0;
+  padding: 3%;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 5%;
+}
+
+.cart-txt {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: #FFFFFF;
+}
+
+.cart-icon {
+  background: rgba(217, 217, 217, 0.5);
+  border-radius: 5px;
+  padding: 3% 4%;
+  display: grid;
+  place-content: center;
+}
+ .cart-icon svg{
+  color: #FFFFFF;
+ }
+
+/* .like{
+  position: absolute;
+  background-color: #ff0000;
+  display: inline-block;
+  border-radius: 100%;
+}
+
+.like img{
+  opacity: 0.2; 
+  position: absolute; 
+  background-color: transparent;
+}  */
+
+
+
+.main-section{
+  display: flex;
+  padding: 1%;
+}
+
+.hero-section{
+  width: 40%;
+  margin-bottom:2%;
+
+}
+
+.img-fluid{
+  height: 100%;
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+}
+
+.card-con{
+  display: flex;
+  height: 45%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media(max-width:950px){
+  .hero-section{
+    display: none;
+  
+  }
+
+  .card {
+    font-family: "open sans";
+    width: 45%;
+    position: relative;
+    border-radius: 20px;
+    margin-bottom: 3%;
+  }
+}
+
+@media (max-width:500px){
+  .card {
+    font-family: "open sans";
+    width: 90%;
+    position: relative;
+    border-radius: 20px;
+    margin-bottom: 10%;
+  }
+}
+
+@media (max-width:360px){
+  .card {
+    font-family: "open sans";
+    width: 97%;
+    position: relative;
+    border-radius: 20px;
+    margin-bottom: 10%;
+  }
 }
