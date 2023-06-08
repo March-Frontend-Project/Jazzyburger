@@ -1,14 +1,11 @@
 import React from "react";
 import Counter from "./Counter";
 import ImgGallery from "./ImgGallery";
-// import like1 from "../assets/vector-images/like.png"
-// import like2 from "../assets/vector-images/like2.png"
-
 import Cart from "./Cart";
-const Card = ({ product, handleIncrease, handleReduce, toCartButton }) => {
+const Card = ({ product, handleIncrease, handleReduce, toCartButton}) => {
   return (
     <div className="card">
-      <img src={product.image} className="card-img-top" alt="..." />
+      <img src={product.image} className="card-img-top " alt="..." />
       <div className="card-body">
         <h5 className="card-title">{product.title}</h5>
         <div className="d-flex justify-content-between align-items-center">
@@ -26,7 +23,7 @@ const Card = ({ product, handleIncrease, handleReduce, toCartButton }) => {
           <ImgGallery />
         </div>
         <div>
-          <Cart product={product} toCartButton={toCartButton} />
+          <Cart product={product} toCartButton={toCartButton}/>
         </div>
       </div>
     </div>

@@ -5,16 +5,24 @@ import img3 from "../assets/fruit-group/group3.png"
 import img4 from "../assets/fruit-group/group4.png"
 import img5 from "../assets/fruit-group/group6.png"
 
-const ImgGallery = () => {
+const ImgGallery = ({a,b,c,d,e}) => {
   return (
     <div className='img-gallery'>
-        <img src={img1} alt="group1" />
-        <img src={img2} alt="group2" />
-        <img src={img3} alt="group3" />
-        <img src={img4} alt="group4" />
-        <img src={img5} alt="group6" />
+        <img src={a} alt="group1" />
+        <img src={b} alt="group2" />
+        <img src={c} alt="group3" />
+        <img src={d} alt="group4" />
+        <img src={e} alt="group6" />
     </div>
   )
+  
+}
+ImgGallery.defaultProps= {
+  a:img1,
+  b:img2,
+  c:img3,
+  d:img4,
+  e:img5
 }
 
 export default ImgGallery

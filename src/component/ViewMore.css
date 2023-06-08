@@ -1,0 +1,53 @@
+.view-more .card-con {
+    display: flex;
+    height: 45%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .view-more .card {
+    font-family: "open sans";
+    width: 22%;
+    position: relative;
+    border-radius: 20px;
+    margin-bottom: 3%;
+  }
+  
+  .view-more .card-title {
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 11px;
+    margin-bottom: 2%;
+    margin-top: 2%;
+  }
+  
+  .view-more .card-body {
+    padding: 6px;
+  }
+  
+  .view-more .price {
+    font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 16px;
+color: #000000;
+    margin: 7% 0;
+  }
+  
+  .view-more .price-tag {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 23px;
+    color: #000000;
+    margin: 0;
+  }
+
+  .view-more .card-title:nth-child(2){
+    font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 16px;
+color: #767575;
+  }

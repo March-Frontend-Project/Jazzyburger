@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import data from "./ProductStore";
-import Card from "./component/Card";
-import background1 from "./assets/background/image 4.png";
+import CartPage from "./component/CartPage";
+import Home from "./Home";
+import { Routes, Route } from "react-router-dom";
+import ViewMore from "./ViewMore";
+
 function App() {
   const [products, setProducts] = useState(data);
+  const [cart, setCart] = useState([]);
+  const appRating = 3
 
   const handleIncrease = (id) => {
     const newProducts = products.map((product) => {
@@ -35,28 +40,38 @@ function App() {
     setProducts(newProducts);
   };
 
+  useEffect(() => {
+    const toCart = () => {
+      setCart(products.filter((product) => product.cart && product));
+    };
+    toCart();
+  }, [products]);
+
   return (
     <div className="App">
-      <main className="main-section">
-        <div className="hero-section">
-          <img
-            src={background1}
-            alt="backgroung-img"
-            className="img-fluid"
-          ></img>
-        </div>
-        <div className="card-con">
-          {products.map((product) => (
-            <Card
-              product={product}
-              key={product.id}
+      <CartPage cart={cart} toCartButton={toCartButton} />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Home
+              products={products}
               handleIncrease={handleIncrease}
               handleReduce={handleReduce}
               toCartButton={toCartButton}
+              cart={cart}
             />
-          ))}
-        </div>
-      </main>
+          }
+        />
+        <Route path="/more" element={<ViewMore
+        products={products}
+        handleIncrease={handleIncrease}
+        handleReduce={handleReduce}
+        toCartButton={toCartButton}
+        cart={cart}
+        />} />
+        {/* <Route path="/rating" element={<Rating/>} /> */}
+      </Routes>
     </div>
   );
 }

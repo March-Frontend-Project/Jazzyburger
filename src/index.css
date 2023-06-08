@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 body {
   margin: 0;
@@ -7,13 +7,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  overflow-x: hidden;
+  height: auto;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+/* ---------------------Home Card ------------------ */
 .card {
   font-family: "open sans";
   width: 30%;
@@ -51,7 +54,7 @@ code {
   margin: 0;
 }
 
-
+/* ------------------------counter stylinng---------------- */
 
 .counter {
   background: rgba(225, 186, 186, 0.75);
@@ -82,7 +85,7 @@ code {
   line-height: 10px;
 }
 
-
+/* ------------img gallery---------------- */
 .img-gallery {
   display: flex;
   justify-content: space-around;
@@ -96,7 +99,7 @@ code {
   display: block;
 }
 
-
+/* --------------------Add to Cart btn---------- */
 .cart-btn {
   display: flex;
   justify-content: space-around;
@@ -126,9 +129,10 @@ code {
   display: grid;
   place-content: center;
 }
- .cart-icon svg{
+
+.cart-icon svg {
   color: #FFFFFF;
- }
+}
 
 /* .like{
   position: absolute;
@@ -145,35 +149,211 @@ code {
 
 
 
-.main-section{
+.main-section {
   display: flex;
   padding: 1%;
+  padding-bottom: 0;
 }
 
-.hero-section{
+.hero-section {
   width: 40%;
-  margin-bottom:2%;
+  margin-bottom: 2%;
 
 }
 
-.img-fluid{
+.img-fluid {
   height: 100%;
   width: 100%;
-  display: block;
-  border-radius: 20px;
 }
 
-.card-con{
+.background1 {
+  display: block;
+  border-radius: 10px;
+}
+
+.card-con {
   display: flex;
   height: 45%;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-@media(max-width:950px){
-  .hero-section{
+
+
+.cart-img {
+  display: flex;
+  justify-content: end;
+  padding-right: 2%;
+
+}
+/* ------------ see more btn------- */
+.see-more-btn {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 23px;
+  color: #FFFFFF;
+  background: #000000;
+  border-radius: 8px;
+  display: block;
+  /* margin: auto; */
+  width: 192px;
+  height: 55px;
+  transition: all 0.5s ease;
+  text-decoration: none !important;
+}
+
+.see-more-btn:hover {
+  background-color: #F31D1D;
+}
+
+main a{
+  text-decoration: none !important;
+}
+
+.more-con{
+  display: grid;
+  place-content: center;
+}
+
+
+/* -------------------- header cart icon-------------------- */
+.cart-badge {
+  position: absolute;
+  left: 18px;
+  top: -4px;
+  color: white;
+  background: rgba(163, 15, 15, 0.86);
+  border-radius: 50%;
+  padding: 7% 20%;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+
+}
+
+/* --------------------Add to Cart inner Design--------------------- */
+
+.cart-img-con {
+  position: relative;
+}
+
+.cart-order {
+  position: absolute;
+  width: 30vw;
+  /* height: 50vh; */
+  right: 0;
+  top: 5vh;
+  background: #F5F5F5;
+  z-index: 1;
+  border-radius: 20px;
+  padding: 30% 90%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: opacity 0.4s, visibility 0.5s, transform 0.4s;
+}
+
+.cart-img-con:hover .cart-order {
+  opacity: 1;
+  visibility: visible;
+  /* display: block; */
+  transform: translateX(0);
+}
+
+.cart-page h3 {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 34px;
+  border-bottom: 2px solid #8787879c;
+  padding: 4% 0;
+}
+
+.cart-page h4 {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20.5882px;
+  line-height: 28px;
+  color: #878787;
+  padding: 3% 0;
+}
+
+.order {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba(135, 135, 135, 0.61);
+  padding: 3% 0;
+
+}
+
+.order h5 {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 23px;
+}
+
+.order-1 {
+  flex-grow: 1;
+}
+
+.order-1 :nth-child(1) {
+  color: #C6C3C3;
+}
+
+.order-1 :nth-child(2) {
+  color: #F31D1D;
+  padding-left: 3%;
+}
+
+.order-2 {
+  justify-content: space-between;
+  width: 25%;
+}
+
+.order-2 :nth-child(2) {
+  padding-left: 10%;
+}
+
+
+
+.sub-total {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba(135, 135, 135, 0.61);
+
+}
+
+.checkout-btn {
+  display: block;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 34px;
+  text-align: center;
+  color: #FFFFFF;
+  background: #0C982B;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  width: 100%;
+  padding: 3% 0;
+  margin: 3% 0;
+}
+
+/* -----------------Media query----------------------------- */
+
+@media(max-width:950px) {
+  .hero-section {
     display: none;
-  
+
   }
 
   .card {
@@ -183,9 +363,12 @@ code {
     border-radius: 20px;
     margin-bottom: 3%;
   }
+  .cart-order {
+    width: 50vw;
+  }
 }
 
-@media (max-width:500px){
+@media (max-width:500px) {
   .card {
     font-family: "open sans";
     width: 90%;
@@ -193,9 +376,13 @@ code {
     border-radius: 20px;
     margin-bottom: 10%;
   }
+
+  .cart-order {
+    width: 90vw;
+  }
 }
 
-@media (max-width:360px){
+@media (max-width:360px) {
   .card {
     font-family: "open sans";
     width: 97%;
@@ -203,4 +390,32 @@ code {
     border-radius: 20px;
     margin-bottom: 10%;
   }
+}
+
+
+
+
+.star-rating {
+  display: inline-block;
+  margin-top: -5px;
+}
+
+.star {
+  font-size: 90%;
+  color: gray;
+  cursor: pointer;
+}
+
+.star.filled {
+  color: gold;
+}
+
+.star-rating p{
+  font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 16px;
+
+color: #878787;
 }
