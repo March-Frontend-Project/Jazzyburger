@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import ViewMore from "./ViewMore";
 import Header from "./component/Header";
 import LoadingPage from "./LoadingPage";
+import Footer2 from "./component/Footer2";
 
 function App() {
   const [products, setProducts] = useState(data);
@@ -59,35 +60,41 @@ function App() {
 
   return (
     <div className="App ">
-      {isLoading && 
-      <LoadingPage/>
-      }
-    {!isLoading && 
-      <div className="container-lg">
-      <Header cart={cart} toCartButton={toCartButton}/>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Home
-              products={products}
-              handleIncrease={handleIncrease}
-              handleReduce={handleReduce}
-              toCartButton={toCartButton}
-              cart={cart}
-            />
-          }
-        />
-        <Route path="/more" element={<ViewMore
-        products={products}
-        handleIncrease={handleIncrease}
-        handleReduce={handleReduce}
-        toCartButton={toCartButton}
-        cart={cart}
-        />} />
-      </Routes>
-      </div>
-}
+      {isLoading && <LoadingPage />}
+      {!isLoading && (
+        <div>
+          <div className="container-lg">
+            <Header cart={cart} toCartButton={toCartButton} />
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <Home
+                    products={products}
+                    handleIncrease={handleIncrease}
+                    handleReduce={handleReduce}
+                    toCartButton={toCartButton}
+                    cart={cart}
+                  />
+                }
+              />
+              <Route
+                path="/more"
+                element={
+                  <ViewMore
+                    products={products}
+                    handleIncrease={handleIncrease}
+                    handleReduce={handleReduce}
+                    toCartButton={toCartButton}
+                    cart={cart}
+                  />
+                }
+              />
+            </Routes>
+          </div>
+          <Footer2 />
+        </div>
+      )}
     </div>
   );
 }

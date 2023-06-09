@@ -210,7 +210,7 @@ code {
   background: #000000;
   border-radius: 8px;
   display: block;
-  /* margin: auto; */
+  margin-bottom: 10%;
   width: 192px;
   height: 55px;
   transition: all 0.5s ease;
