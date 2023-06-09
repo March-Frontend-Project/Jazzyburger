@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-// import './StarRating.css';
 
-const StarRating = () => {
+const StarRating = ({ product }) => {
   const [rating, setRating] = useState(0);
 
   const handleStarClick = (selectedRating) => {
     setRating(selectedRating);
+    product.rating = selectedRating;
   };
 
   return (

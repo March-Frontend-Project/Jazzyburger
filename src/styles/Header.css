@@ -1,0 +1,190 @@
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-1 {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: space-between;
+    gap: 10%;
+}
+
+.header-1 p {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: #F31D1D;
+
+}
+
+.header-2 {
+    display: flex;
+    align-items: center;
+    width: 34%;
+    justify-content: space-between;
+}
+
+.header-2 h1 {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0;
+    color: #F31D1D;
+}
+
+.header-2 p {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.47);
+}
+
+.hero-banner {
+    margin-top: 2%;
+    margin-bottom: 3%;
+    height: 70vh;
+}
+
+/* ---------------------- Guest styling ----------------------*/
+
+.guest-con {
+    position: relative;
+    cursor: default
+}
+
+.login-hover-con {
+    position: absolute;
+    width: 20vw;
+    right: 0;
+    top: 5vh;
+    background: #F5F5F5;
+    z-index: 1;
+    border-radius: 10px;
+    padding: 10%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: opacity 0.4s, visibility 0.5s, transform 0.4s;
+}
+
+.guest-con:hover .login-hover-con {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.login-con {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #294BFA;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 2% 5%;
+}
+
+.login-text {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 34px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 100%;
+    text-align: center;
+}
+
+.signup-con {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #F5F5F5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 2% 5%;
+    margin-top: 5%;
+    border: #F31D1D 1px solid;
+}
+
+.signup-text {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 34px;
+    color: #F31D1D;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+/* -------------Media Query----------------------- */
+@media(max-width:1200px) {
+    .header-2 {
+        width: 45%;
+    }
+
+    .header-1 {
+        width: 35%;
+    }
+
+    .login-hover-con {
+        width: 30vw;
+        padding: 7%;
+    }
+}
+
+@media(max-width:950px) {
+    .header-2 {
+        width: 50%;
+    }
+
+    .hero-banner {
+        height: 50vh;
+    }
+
+    .login-hover-con {
+        width: 30vw;
+        padding: 7%;
+    }
+}
+
+@media(max-width:768px) {
+    .header-2 {
+        width: 55%;
+    }
+}
+
+@media (max-width:500px) {
+    .header-2 {
+        width: 45%;
+    }
+
+    .product-text,
+    .guest-text,
+    .guest-image {
+        display: none;
+    }
+
+    .hero-banner {
+        height: 50vh;
+    }
+
+    .login-hover-con {
+        width: 70vw;
+        padding: 30%;
+    }
+}
+
+@media (max-width:360px) {}

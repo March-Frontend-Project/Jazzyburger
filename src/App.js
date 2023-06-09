@@ -1,14 +1,13 @@
 import { useState, useEffect } from "react";
 import data from "./ProductStore";
-import CartPage from "./component/CartPage";
 import Home from "./Home";
 import { Routes, Route } from "react-router-dom";
 import ViewMore from "./ViewMore";
+import Header from "./component/Header";
 
 function App() {
   const [products, setProducts] = useState(data);
   const [cart, setCart] = useState([]);
-  const appRating = 3
 
   const handleIncrease = (id) => {
     const newProducts = products.map((product) => {
@@ -48,8 +47,8 @@ function App() {
   }, [products]);
 
   return (
-    <div className="App">
-      <CartPage cart={cart} toCartButton={toCartButton} />
+    <div className="App container-lg">
+      <Header cart={cart} toCartButton={toCartButton}/>
       <Routes>
         <Route
           path="/"
@@ -70,7 +69,6 @@ function App() {
         toCartButton={toCartButton}
         cart={cart}
         />} />
-        {/* <Route path="/rating" element={<Rating/>} /> */}
       </Routes>
     </div>
   );

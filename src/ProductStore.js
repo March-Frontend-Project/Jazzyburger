@@ -108,8 +108,25 @@ const data = [
         count: 1,
         desc:"Fanta is an orange refreshing drink to enjoy with burgers and share with",
         cart: false
+    },
+    {
+        id: 13,
+        image: burger1,
+        price:  10500,
+        title:"Double Beef Burger",
+        count: 1,
+        desc:"Our “Double Beef Burger” is prepared with the best quality of jazzy buns",
+        cart: false
+    },
+    {
+        id: 11,
+        image: burger6,
+        price:  9000,
+        title:"Grilled Chicken Burger",
+        count: 1,
+        desc:"Our Single patty Grilled Chicken Burger are with cheese, tomato, cucumber ",
+        cart: false
     }
-
 ]
 
 export default data

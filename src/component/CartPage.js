@@ -8,14 +8,17 @@ const CartPage = ({ cart,toCartButton }) => {
     <div className="cart-page">
       <div className="cart-img">
         <div className="cart-img-con">
+            <label htmlFor="cart-icon">
           <span className="cart-badge">{cart.length}</span>
           <img src={cartIcon} alt="cart-icon" className="" />
+          </label>
+          <input type="checkbox" id="cart-icon" className="d-none"/>
           <div className="cart-order">
             <h3>Your Order</h3>
             {cart.length > 0 ?
             <>
             {cart.map((order) => (
-              <CartOrder 
+              <CartOrder
               order={order} 
               key={order.id}
               toCartButton={toCartButton} 

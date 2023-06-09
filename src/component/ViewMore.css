@@ -3,6 +3,7 @@
     height: 45%;
     flex-wrap: wrap;
     justify-content: space-around;
+    width: 100%;
   }
   
   .view-more .card {
@@ -51,3 +52,33 @@ font-size: 12px;
 line-height: 16px;
 color: #767575;
   }
+
+
+
+
+  @media(max-width:950px) {
+  
+    .view-more .card {
+      width: 45%;
+      margin-bottom: 3%;
+    }
+  }
+  
+  @media (max-width:500px) {
+    .view-more .card {
+      width: 90%;
+      margin-bottom: 10%;
+    }
+  
+    .view-more .cart-order {
+      width: 90vw;
+    }
+  }
+  
+  @media (max-width:360px) {
+    .view-more .card {
+      width: 97%;
+    }
+  }
+  
+  

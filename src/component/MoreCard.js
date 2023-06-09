@@ -24,7 +24,8 @@ const MoreCard = ({ product, toCartButton }) => {
           </div>
         </div>
         <div className="d-flex justify-content-between align-items-center">
-            <Rating/>
+            <Rating product={product}/>
+            <p className="price-tag" style={{marginBottom:"0px"}}>&#8358;{product.price}.00</p>
         </div>
         <div>
           <Cart product={product} toCartButton={toCartButton} />
