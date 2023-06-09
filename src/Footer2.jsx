@@ -1,13 +1,13 @@
 import React from "react";
-import vect from "../Assets/icons/Vector (10).png";
-import vect1 from "../Assets/icons/Vector (12).png";
-import vect2 from "../Assets/icons/Vector (13).png";
-import vect4 from "../Assets/icons/Vector (14).png";
-import vect5 from "../Assets/icons/image 10.png";
-import icon1 from "../Assets/icons/Vector (3).png";
-import icon2 from "../Assets/icons/Vector (4).png";
-import icon3 from "../Assets/icons/Vector (15)ghhf.png";
-import icon4 from "../Assets/icons/Vector (6).png";
+import vect from "./assets/icons/Vector (10).png";
+import vect1 from "./assets/icons/Vector (12).png";
+import vect2 from "./assets/icons/Vector (13).png";
+import vect4 from "./assets/icons/Vector (14).png";
+import vect5 from "./assets/icons/image 10.png";
+import { FaFacebookF } from "react-icons/fa";
+import { SiInstagram } from "react-icons/si";
+import { ImTwitter } from "react-icons/im";
+import { AiOutlineYoutube } from "react-icons/ai";
 
 const Footer2 = () => {
   return (
@@ -27,8 +27,10 @@ const Footer2 = () => {
 
             <div className="TW-FS-support">
               <div className="vect">
-                <img src={vect1} alt="" className="vect11" />
-                <img src={vect2} alt="" className="vect2" />
+                <div className="vect-rel">
+                  <img src={vect1} alt="" className="vect11" />
+                  <img src={vect2} alt="" className="vect2" />
+                </div>
               </div>
 
               <div className="twenty">
@@ -75,10 +77,11 @@ const Footer2 = () => {
           <div className="help-link">
             <h1 className="">Need help</h1>
             <div className="link">
-              <a href="tel:+234 466 6655">+234 466 6655 or</a>
+              <a href="tel:+234 466 6655">+234 466 6655</a>{" "}
+              <span className="link">or</span>
             </div>
             <div className="link">
-              <a href="http://help@jazzyburger.com">help@jazzyburger.com</a>
+              <a href="/">help@jazzyburger.com</a>
             </div>
           </div>
 
@@ -86,33 +89,34 @@ const Footer2 = () => {
 
           <div className="Sm-icons">
             <div className="icons">
-              <div>
+              <div className="icon1 ">
                 <a
+                  className="d-block"
                   href="https://web.facebook.com/112170038391085/posts/1588022294986034/?substory_index=1588022294986034&app=fbl&_rdc=1&_rdr"
                   target="_blank"
                 >
-                  <img className="icon1" src={icon1} alt="" />
+                  <FaFacebookF className="rotate-on-hover" />
                 </a>
               </div>
-              <div>
+              <div className="icon1">
                 <a
                   href="https://twitter.com/jazzysburger?t=Y1T3JvkqJbGDoK_sQaGyqw&s=08"
                   target="_blank"
                 >
-                  <img className="icon2" src={icon2} alt="" />
+                  <ImTwitter className="rotate-on-hover" />
                 </a>
               </div>
-              <div>
+              <div className="icon1">
                 <a
                   href="https://www.instagram.com/jazzysburger/?hl=en#"
                   target="_blank"
                 >
-                  <img className="icon3" src={icon3} alt="" />
+                  <SiInstagram className="rotate-on-hover" />
                 </a>
               </div>
-              <div>
+              <div className="icon1">
                 <a href="https://www.jazzysburger.com/" target="_blank">
-                  <img className="icon4" src={icon4} alt="" />
+                  <AiOutlineYoutube className="rotate-on-hover" />
                 </a>
               </div>
             </div>
