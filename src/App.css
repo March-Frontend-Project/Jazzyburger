@@ -6,7 +6,7 @@
   display: flex;
   border-radius: 50%;
   position: absolute;
-  background: rgba(234, 234, 234);
+  background: rgba(234, 234, 234, .6);
 }
 
 .heart {

@@ -12,7 +12,7 @@ const Favourite = () => {
   return (
     <div>
       <div className="heart-bck" onClick={toggleHeart}>
-        {heart ===true ? <FaHeart className="heart red" /> : <FaRegHeart className="heart" />}
+        {heart ===true ? <FaRegHeart className="heart" /> : <FaHeart className="heart red" />}
       </div>
     </div>
   );
