@@ -30,7 +30,7 @@ return (
                         <p className='number'><b>0</b></p>
                     </div>
                 </div>
-            </header>
+            </header>g
         </div>
     )
 }
