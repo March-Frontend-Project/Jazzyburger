@@ -22,6 +22,12 @@ code {
   position: relative;
   border-radius: 20px;
   margin-bottom: 3%;
+  transition: all 0.5s ease-in-out;
+}
+
+.card:hover{
+  scale: 1.02;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
 .card-title {
@@ -112,6 +118,7 @@ code {
   margin-bottom: 5%;
 }
 
+
 .cart-txt {
   font-family: 'Open Sans';
   font-style: normal;
@@ -128,6 +135,7 @@ code {
   display: grid;
   place-content: center;
 }
+
 
 .cart-icon svg {
   color: #FFFFFF;
@@ -169,6 +177,11 @@ code {
 .background1 {
   display: block;
   border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.background1:hover{
+  transform: scaleX(1.03);
 }
 
 .card-con {
@@ -202,6 +215,7 @@ code {
   height: 55px;
   transition: all 0.5s ease;
   text-decoration: none !important;
+  outline: none;
 }
 
 .see-more-btn:hover {

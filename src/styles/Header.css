@@ -1,6 +1,11 @@
 header {
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    padding-bottom: 1%;
+    z-index: 10000000;
+    background-color: #FFFFFF;
 }
 
 .header-1 {
@@ -9,6 +14,13 @@ header {
     width: 30%;
     justify-content: space-between;
     gap: 10%;
+}
+.header-1>div:nth-child(1){
+    transition: all 0.8s ease;
+}
+
+.header-1 >div:nth-child(1):hover{
+    transform: scale(1.03);
 }
 
 .header-1 p {
@@ -49,9 +61,14 @@ header {
 }
 
 .hero-banner {
-    margin-top: 2%;
     margin-bottom: 3%;
     height: 70vh;
+    transition: 1s all;
+    transform: scale(0.98);
+}
+
+.hero-banner:hover{
+    transform: scale(1);
 }
 
 /* ---------------------- Guest styling ----------------------*/
