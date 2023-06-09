@@ -143,6 +143,11 @@ header {
         width: 30vw;
         padding: 7%;
     }
+    .header-2 input[type="checkbox"]:checked+.login-hover-con{
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+      }
 }
 
 @media(max-width:950px) {

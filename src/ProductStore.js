@@ -119,7 +119,7 @@ const data = [
         cart: false
     },
     {
-        id: 11,
+        id: 14,
         image: burger6,
         price:  9000,
         title:"Grilled Chicken Burger",

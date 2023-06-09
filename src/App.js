@@ -4,11 +4,12 @@ import Home from "./Home";
 import { Routes, Route } from "react-router-dom";
 import ViewMore from "./ViewMore";
 import Header from "./component/Header";
+import LoadingPage from "./LoadingPage";
 
 function App() {
   const [products, setProducts] = useState(data);
   const [cart, setCart] = useState([]);
-
+  const [isLoading, setIsLoading] = useState(true);
   const handleIncrease = (id) => {
     const newProducts = products.map((product) => {
       if (product.id === id) {
@@ -46,8 +47,23 @@ function App() {
     toCart();
   }, [products]);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
-    <div className="App container-lg">
+    <div className="App ">
+      {isLoading && 
+      <LoadingPage/>
+      }
+    {!isLoading && 
+      <div className="container-lg">
       <Header cart={cart} toCartButton={toCartButton}/>
       <Routes>
         <Route
@@ -70,6 +86,8 @@ function App() {
         cart={cart}
         />} />
       </Routes>
+      </div>
+}
     </div>
   );
 }

@@ -15,14 +15,17 @@ const HeaderAcess = ({ cart,toCartButton}) => {
             </div>
             <h1 className='align-self-center product-text'>All Products</h1>
         </div>
+        <label htmlFor='login-hover-box'>
         <div className='d-flex align-items-center gap-3 guest-con'>
             <div>
                 <img src={guestIcon} alt="guest-icon" className='img-fluid'/>
             </div>
             <p className='guest-text'>Hi,Guests</p>
             <div className='guest-image'><img src={guestVector} alt="guest-vector" className='img-fluid'/></div>
+            <input type='checkbox' id='login-hover-box' className='d-none'></input>
             <LoginHover/>
         </div>
+        </label>
         <div>
         <CartPage cart={cart} toCartButton={toCartButton}/>
         </div>

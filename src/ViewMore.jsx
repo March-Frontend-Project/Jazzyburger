@@ -2,7 +2,7 @@ import React from 'react'
 import MoreCard from './component/MoreCard';
 import "./component/ViewMore.css"
 
-const ViewMore = ({ products, handleIncrease, handleReduce, toCartButton,cart}) => {
+const ViewMore = ({ products,toCartButton}) => {
   return (
     <div className="view-more">
     <div className="card-con">

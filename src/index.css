@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -374,6 +373,24 @@ line-height: 16px;
 color: #878787;
 }
 
+/* -------Loader------------------ */
+.loader{
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-content: center;
+  background-color:#878787;
+}
+
+.loading-txt{
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 34px;
+  padding: 4% 0;
+}
+
 /* -----------------Media query----------------------------- */
 @media(max-width:1200px){
   .card-con {
@@ -404,6 +421,12 @@ color: #878787;
 
   .cart-order {
     width: 40vw;
+  }
+
+  .cart-page input[type="checkbox"]:checked+.cart-order{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
   }
 }
 @media(max-width:950px) {

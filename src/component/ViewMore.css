@@ -1,8 +1,11 @@
+.view-more{
+    margin: 2% 0;
+}
 .view-more .card-con {
     display: flex;
     height: 45%;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
   }
   
