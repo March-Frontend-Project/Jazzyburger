@@ -34,6 +34,7 @@ color: #000000;
 }
 
 .label{
+  
 left: 0.12px;
 top: 333.65px;
 font-style: normal;
@@ -74,3 +75,17 @@ color: #000000;
   background-color: #fff;
 }
 
+.error{
+  border: 1px solid red;
+}
+.error:focus{
+  border: 1px solid red;
+}
+.label2{
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+.label3{
+  margin-top: -20px;
+  margin-bottom: 20px;
+}

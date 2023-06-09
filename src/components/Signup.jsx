@@ -32,7 +32,7 @@ const Signup = () => {
       if (!value.includes("@") || !value.includes(".com")) {
         setErrors((prevErrors) => ({
           ...prevErrors,
-          email: "Invalid email format",
+          email: "Invalid email format*",
         }));
       }
     }
@@ -41,7 +41,7 @@ const Signup = () => {
       if (!value.includes("+234")) {
         setErrors((prevErrors) => ({
           ...prevErrors,
-          email: "Invalid Format",
+          phoneNumber: "Invalid Format*",
         }));
       }
     }
@@ -50,9 +50,16 @@ const Signup = () => {
       if (value.length < 8) {
         setErrors((prevErrors) => ({
           ...prevErrors,
-          [name]: "Password should be at least 8 characters",
+          [name]: "Passwords too short*",
         }));
       }
+    }
+
+    if (user.password !== user.confirmPassWord) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        confirmPassWord: "Passwords do not match*",
+      }));
     }
   };
 
@@ -66,27 +73,24 @@ const Signup = () => {
 
     // Check for errors
     if (firstName.length === 0) {
-      newErrors.firstName = "First name is required";
+      newErrors.firstName = "Required*";
     }
     if (lastName.length === 0) {
-      newErrors.lastName = "Last name is required";
+      newErrors.lastName = "Required*";
     }
     if (email.length === 0) {
-      newErrors.email = "Email is required";
+      newErrors.email = "Required*";
     }
     if (phoneNumber.length == 0) {
-      newErrors.phoneNumber = "Phone number is required";
+      newErrors.phoneNumber = "Required*";
     }
 
     if (password.length < 8) {
-      newErrors.password = "Password should be at least 8 characters";
+      newErrors.password = "Password should be at least 8 characters*";
     }
     if (confirmPassWord.length < 8) {
       newErrors.confirmPassWord =
-        "Confirm password should be at least 8 characters";
-    }
-    if (password == confirmPassWord) {
-      newErrors.confirmPassWord = "Passwords do not match";
+        "Confirm password should be at least 8 characters*";
     }
 
     if (Object.keys(newErrors).length > 0) {
@@ -110,7 +114,7 @@ const Signup = () => {
               First name
             </label>
             <input
-              className="form-control "
+              className={`form-control ${errors.firstName ? "error" : ""}`}
               type="text"
               id="firstName"
               name="firstName"
@@ -128,7 +132,7 @@ const Signup = () => {
               Last name
             </label>
             <input
-              className="form-control "
+              className={`form-control ${errors.lastName ? "error" : ""}`}
               type="text"
               id="lastName"
               name="lastName"
@@ -145,7 +149,7 @@ const Signup = () => {
               Email
             </label>
             <input
-              className="form-control "
+              className={`form-control ${errors.email ? "error" : ""}`}
               type="text"
               id="email"
               name="email"
@@ -162,7 +166,7 @@ const Signup = () => {
               Phone Number
             </label>
             <input
-              className="form-control "
+              className={`form-control ${errors.phoneNumber ? "error" : ""}`}
               type="text"
               id="phoneNumber"
               name="phoneNumber"
@@ -179,17 +183,14 @@ const Signup = () => {
               Password (8 character minimum)
             </label>
             <input
-              className="form-control "
+              className={`form-control ${errors.password ? "error" : ""}`}
               type={passwordVisible ? "text" : "password"}
               id="password"
-              name="Password"
+              name="password"
               placeholder="Password"
               value={password}
               onChange={handleChange}
             />
-            {errors.password && (
-              <label className="label1 text-danger">{errors.password}</label>
-            )}
 
             <button
               className="btn-password"
@@ -203,24 +204,27 @@ const Signup = () => {
               ></i>
             </button>
           </div>
+          <div className="er">
+            {errors.password && (
+              <label className="label3 text-danger">{errors.password}</label>
+            )}
+          </div>
           <div className="mb-3 login">
             <label className="label d-block" htmlFor="">
               Confirm Password
             </label>
             <input
-              className="form-control "
+              className={`form-control ${
+                errors.confirmPassWord ? "error" : ""
+              }`}
               type={passwordVisible1 ? "text" : "password"}
-              id="confirm password"
-              name="confirm password"
+              id="confirmPassWord"
+              name="confirmPassWord"
               placeholder="Confirm Password"
               value={confirmPassWord}
               onChange={handleChange}
             />
-            {errors.confirmPassWord && (
-              <label className="label1 text-danger">
-                {errors.confirmPassWord}
-              </label>
-            )}
+
             <button
               className="btn-password"
               onClick={handleTogglePassword1}
@@ -233,12 +237,19 @@ const Signup = () => {
               ></i>
             </button>
           </div>
+          <div className="er">
+            {errors.confirmPassWord && (
+              <label className="label2 text-danger">
+                {errors.confirmPassWord}
+              </label>
+            )}
+          </div>
 
           <div className="mb-3">
             <input type="checkbox" />
             <label htmlFor="">Keep me signed in</label>
           </div>
-          
+
           <div className="btn1 text-center mb-4">
             <button className="btn-create">Create Your Account</button>
           </div>
