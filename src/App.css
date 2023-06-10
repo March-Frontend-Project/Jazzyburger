@@ -1,38 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 .App {
-  text-align: center;
+  /* text-align: center; */
+}
+.sam{
+ font-family: Open Sans;
+font-size: 25px;
+font-weight: 700;
+line-height: 34px;
+letter-spacing: 0em;
+text-align: left;
+border: 0.5px solid #00000049;
+height: auto;
+width: 50%;
+padding:  1rem;
+margin-left: 1rem;
+border-radius: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.rev{
+font-family: Open Sans;
+font-size: 14px;
+font-weight: 400;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: left;
+height: 19px;
+width: 452px;
+left: 24px;
+top: 176px;
+border-radius: nullpx;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.thed{
+padding: 1rem 0;
+border-bottom: 1px solid #00000049;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.place{
+  margin-top: 1rem;
+  background-color:  #0C982B;
+  border: none;
+  border-radius: 10px;
   color: white;
+  width: 100%;
+  font-size: 14px;
+}
+.add{
+  background-color:  #000000;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  width: 50%;
+  color: white;
+  font-size: 16px;
+  
+
+}
+.flat{
+  font-size: 20px;
+}
+.dutch{
+font-family: 'Open Sans';
+font-weight: 700;
+font-size: 25px;
+color: #000000;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width:678px){
+.sam{
+  flex-direction: column;
+  width: 90%;
+  justify-content: center;
+  padding: 5%, 5%;
+  background-color: #F9F2F2;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.rev{
+  width: 70%;
+  height: 50%;
+}
+.dutch{
+  padding-top: none !important;
+}
+.add{
+  width: 100%;
+  font-size: 16px;
+}
+.flat{
+font-weight: 600;
+font-size: 20px;
+}
 }
