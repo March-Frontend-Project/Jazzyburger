@@ -163,7 +163,7 @@ small {
   place-content: center;
   height: 50px;
   width: 50px;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .icon2 {
@@ -242,7 +242,7 @@ small {
 
 /* -----------------------rotate---------------- */
 .rotate-on-hover {
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   display: block;
   color: white;
   font-size: 150%;
