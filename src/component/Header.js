@@ -5,7 +5,7 @@ import "../styles/Header.css"
 
 const Header = ({ cart,toCartButton}) => {
   return (
-    <header>
+    <header className="container-lg">
         <HeaderIcon/>
         <HeaderAcess cart={cart} toCartButton={toCartButton}/>
     </header>

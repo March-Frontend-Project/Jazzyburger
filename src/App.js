@@ -63,8 +63,8 @@ function App() {
       {isLoading && <LoadingPage />}
       {!isLoading && (
         <div>
+          <Header cart={cart} toCartButton={toCartButton} />
           <div className="container-lg">
-            <Header cart={cart} toCartButton={toCartButton} />
             <Routes>
               <Route
                 path="/"
