@@ -70,6 +70,12 @@ header {
 .hero-banner:hover{
     transform: scale(1);
 }
+.all-product-cont{
+    transition: 0.6s all ease;
+}
+.all-product-cont:hover{
+    transform: scale(1.05);
+}
 
 /* ---------------------- Guest styling ----------------------*/
 

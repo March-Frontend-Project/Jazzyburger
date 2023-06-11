@@ -3,9 +3,9 @@ import data from "./ProductStore";
 import Home from "./Home";
 import { Routes, Route } from "react-router-dom";
 import ViewMore from "./ViewMore";
-import Header from "./component/Header";
 import LoadingPage from "./LoadingPage";
-import Footer2 from "./component/Footer2";
+import Signup from "./Signup";
+import Login from "./Login";
 
 function App() {
   const [products, setProducts] = useState(data);
@@ -63,8 +63,7 @@ function App() {
       {isLoading && <LoadingPage />}
       {!isLoading && (
         <div>
-          <Header cart={cart} toCartButton={toCartButton} />
-          <div className="container-lg">
+          <div >
             <Routes>
               <Route
                 path="/"
@@ -90,9 +89,10 @@ function App() {
                   />
                 }
               />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/login" element={<Login />} />
             </Routes>
           </div>
-          <Footer2 />
         </div>
       )}
     </div>

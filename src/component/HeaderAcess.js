@@ -9,7 +9,7 @@ const HeaderAcess = ({ cart,toCartButton}) => {
     const navigate = useNavigate()
   return (
     <div className='header-2'>
-        <div className='d-flex align-items-center gap-3' onClick={()=>navigate("/more")} style={{cursor:"pointer"}}>
+        <div className='d-flex align-items-center gap-3 all-product-cont' onClick={()=>navigate("/more")} style={{cursor:"pointer"}}>
             <div className='d-flex align-items-center'>
             <img src={allProduct} alt="all-product-icon" className='img-fluid'/>
             </div>
