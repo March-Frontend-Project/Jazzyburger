@@ -2,37 +2,89 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sam {
+  font-family: Open Sans;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: left;
+  border: 0.5px solid #000;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 50%;
+  margin: 3% auto;
+  max-width: 600px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.rev {
+  font-family: Open Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  border-radius: 0;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.thed {
+  padding: 1rem 0;
+  border-bottom: 1px solid black;
+}
+
+.place {
+  margin-top: 1rem;
+  background-color: #0C982B;
+  border: none;
+  border-radius: 10px;
   color: white;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.add {
+  background-color: #000000;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  width: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.addy {
+  font-family: Open Sans;
+  font-size: 25px;
+  font-weight: 700;
+  border: 0.5px solid #000;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 1px 2px grey;
+  width: 30%;
+  margin: 0 auto;
 }
+
+form {
+  margin-top: 2rem;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-size: small;
+  color: dimgrey;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.btn {
+  width: 100%;
+}
+
+
+
+
