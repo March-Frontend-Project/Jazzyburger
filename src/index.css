@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -15,6 +16,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 /* ---------------------Home Card ------------------ */
 .card {
   font-family: "open sans";
@@ -25,7 +27,7 @@ code {
   transition: all 0.5s ease-in-out;
 }
 
-.card:hover{
+.card:hover {
   scale: 1.02;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
@@ -141,19 +143,6 @@ code {
   color: #FFFFFF;
 }
 
-/* .like{
-  position: absolute;
-  background-color: #ff0000;
-  display: inline-block;
-  border-radius: 100%;
-}
-
-.like img{
-  opacity: 0.2; 
-  position: absolute; 
-  background-color: transparent;
-}  */
-
 
 
 .main-section {
@@ -180,7 +169,7 @@ code {
   transition: all 0.5s ease-in-out;
 }
 
-.background1:hover{
+.background1:hover {
   transform: scaleX(1.03);
 }
 
@@ -199,6 +188,7 @@ code {
   padding-right: 2%;
 
 }
+
 /* ------------ see more btn------- */
 .see-more-btn {
   font-family: 'Open Sans';
@@ -222,11 +212,11 @@ code {
   background-color: #F31D1D;
 }
 
-main a{
+main a {
   text-decoration: none !important;
 }
 
-.more-con{
+.more-con {
   display: grid;
   place-content: center;
 }
@@ -258,6 +248,8 @@ main a{
 .cart-order {
   position: absolute;
   width: 30vw;
+  overflow: auto;
+  max-height: 30vh;
   right: 0;
   top: 5vh;
   background: #F5F5F5;
@@ -270,7 +262,7 @@ main a{
   transition: opacity 0.4s, visibility 0.5s, transform 0.4s;
 }
 
-.cart-img-con:hover .cart-order{
+.cart-img-con:hover .cart-order {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
@@ -377,26 +369,26 @@ main a{
   color: gold;
 }
 
-.star-rating p{
+.star-rating p {
   font-family: 'Open Sans';
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 16px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
 
-color: #878787;
+  color: #878787;
 }
 
 /* -------Loader------------------ */
-.loader{
+.loader {
   height: 100vh;
   width: 100vw;
   display: grid;
   place-content: center;
-  background-color:#878787;
+  background-color: #878787;
 }
 
-.loading-txt{
+.loading-txt {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 700;
@@ -406,7 +398,7 @@ color: #878787;
 }
 
 /* -----------------Media query----------------------------- */
-@media(max-width:1200px){
+@media(max-width:1200px) {
   .card-con {
     width: 100%;
   }
@@ -430,19 +422,20 @@ color: #878787;
     width: 25%;
     margin-bottom: 2%;
     height: auto;
-  
+
   }
 
   .cart-order {
     width: 40vw;
   }
 
-  .cart-page input[type="checkbox"]:checked+.cart-order{
+  .cart-page input[type="checkbox"]:checked+.cart-order {
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
   }
 }
+
 @media(max-width:950px) {
 
   .card-con {
@@ -453,12 +446,12 @@ color: #878787;
     display: none;
   }
 
-  .cart-page input[type="checkbox"]:checked+.cart-order{
+  .cart-page input[type="checkbox"]:checked+.cart-order {
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
   }
-  
+
 
   .card {
     font-family: "open sans";
@@ -467,6 +460,7 @@ color: #878787;
     border-radius: 20px;
     margin-bottom: 3%;
   }
+
   .cart-order {
     width: 60vw;
   }
@@ -484,6 +478,7 @@ color: #878787;
 
   .cart-order {
     width: 90vw;
+    max-height: 50vh;
   }
 }
 
@@ -496,7 +491,3 @@ color: #878787;
     margin-bottom: 10%;
   }
 }
-
-
-
-

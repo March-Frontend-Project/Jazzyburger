@@ -6,6 +6,8 @@ import ViewMore from "./ViewMore";
 import LoadingPage from "./LoadingPage";
 import Signup from "./Signup";
 import Login from "./Login";
+import CheckOut from "./CheckOut";
+import Update from "./Update";
 
 function App() {
   const [products, setProducts] = useState(data);
@@ -63,7 +65,7 @@ function App() {
       {isLoading && <LoadingPage />}
       {!isLoading && (
         <div>
-          <div >
+          <div>
             <Routes>
               <Route
                 path="/"
@@ -89,8 +91,24 @@ function App() {
                   />
                 }
               />
-                <Route path="/signup" element={<Signup />} />
-                <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/login" element={<Login />} />
+              <Route
+                path="/checkout"
+                element={<CheckOut 
+                  cart={cart} 
+                  toCartButton={toCartButton}
+                  handleIncrease ={handleIncrease} 
+                  handleReduce ={handleReduce}
+                  />}
+              />
+              <Route
+                path="/update"
+                element={<Update
+                  cart={cart} 
+                  toCartButton={toCartButton}
+                  />}
+              />
             </Routes>
           </div>
         </div>
