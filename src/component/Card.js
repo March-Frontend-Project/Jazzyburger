@@ -2,9 +2,11 @@ import React from "react";
 import Counter from "./Counter";
 import ImgGallery from "./ImgGallery";
 import Cart from "./Cart";
+import Favourite from "./Favourite";
 const Card = ({ product, handleIncrease, handleReduce, toCartButton}) => {
   return (
-    <div className="card">
+    <div className="card" onDoubleClick={()=>toCartButton(product.id)}>
+      <Favourite/>
       <img src={product.image} className="card-img-top " alt="..." />
       <div className="card-body">
         <h5 className="card-title">{product.title}</h5>

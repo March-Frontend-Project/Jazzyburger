@@ -2,6 +2,7 @@ import React from "react";
 import ImgGallery from "./ImgGallery";
 import Cart from "./Cart";
 import Rating from "./Rating";
+import Favourite from "./Favourite";
 import img1 from "../assets/fruit-group/group7.png";
 import img2 from "../assets/fruit-group/group8.png";
 import img3 from "../assets/fruit-group/group9.png";
@@ -10,7 +11,8 @@ import img5 from "../assets/fruit-group/group11.png";
 
 const MoreCard = ({ product, toCartButton }) => {
   return (
-    <div className="card">
+    <div className="card" onDoubleClick={()=>toCartButton(product.id)}>
+      <Favourite/>
       <img src={product.image} className="card-img-top img-fluid" alt="..." />
       <div className="card-body">
         <h5 className="card-title">{product.title}</h5>
