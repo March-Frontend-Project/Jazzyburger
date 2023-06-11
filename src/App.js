@@ -1,5 +1,4 @@
-import "./App.css";
-import Favourite from "./component/Favourite";
+import "./favourite.css";
 import { useState } from "react";
 import data from "./ProductStore";
 import Card from "./component/Card";
