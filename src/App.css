@@ -1,72 +1,97 @@
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
-  
-.form-container{
+
+.form-container {
   border: 2px solid #eee;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-.form-control{
-  height: 40px;
+
+.form-control {
+  height: 50px;
   border: 1px solid #878787;
 }
-.form-control:focus{
+
+.form-control:focus {
   border: none;
   box-shadow: none;
   border: 2px solid #222;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-.create{
-left: calc(50% - 260px/2 + 23.98px);
-top: 238.81px;
-
-font-family: 'Open Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 25px;
-line-height: 34px;
-
-color: #000000;
+.create {
+  left: calc(50% - 260px/2 + 23.98px);
+  top: 238.81px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 34px;
+  color: #000000;
 }
 
-.label{
-  
-left: 0.12px;
-top: 333.65px;
-font-style: normal;
-line-height: 25px;
-color: #878787;
+.label {
+  color: #878787;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 25px;
+  color: #878787;
+  padding-bottom: 5px;
 }
-.btn-create:hover{
+
+input {
+
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700 !important;
+  font-size: 13px;
+  line-height: 25px;
+  color: #4b4b4b !important;
+}
+
+input::placeholder {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  opacity: 0.5 !important;
+  font-size: 13px;
+  line-height: 31px;
+  color: #878787;
+}
+
+.btn-create:hover {
   background: rgba(255, 0, 0, 0.676)
 }
-.btn-create{
-  width: 85%;
+
+.btn-create {
+  width: 100%;
   font-family: 'Open Sans';
-font-style: normal;
-font-weight: 600;
+  font-style: normal;
+  font-weight: 600;
   color: #FFFFFF;
   background: #F31D1D;
-border-radius: 3px;
-border: none;
+  border-radius: 10px;
+  border: none;
   outline: none;
   padding: 1.5%;
 }
 
-.foot{
- font-style: normal;
-text-align: center;
-color: #000000;
+.foot {
+  font-style: normal;
+  text-align: center;
+  color: #000000;
 }
 
-.login{
+.login {
   position: relative;
 }
-.btn-password{
+
+.btn-password {
   position: absolute;
   right: 2%;
   bottom: 13%;
@@ -75,17 +100,68 @@ color: #000000;
   background-color: #fff;
 }
 
-.error{
+.error {
   border: 1px solid red;
 }
-.error:focus{
+
+.error:focus {
   border: 1px solid red;
 }
-.label2{
+
+.label2 {
   margin-top: -15px;
   margin-bottom: 20px;
 }
-.label3{
+
+.label3 {
   margin-top: -20px;
   margin-bottom: 20px;
+}
+
+input[type="tel"] {
+  padding-left: 55px;
+}
+
+.toolkit-con {
+  position: relative;
+}
+
+.toolkit {
+  position: absolute;
+  top: 0px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 35px;
+  color: #000000;
+  background: rgba(185, 183, 183, 0.56);
+  display: grid;
+  place-content: center;
+  height: 50px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  display: inline-block;
+  transform: scale(1.5);
+}
+
+.sign {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600 !important;
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.82);
+
+}
+
+.foot p {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 31px;
 }

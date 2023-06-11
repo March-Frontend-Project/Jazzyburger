@@ -38,7 +38,7 @@ const Signup = () => {
     }
 
     if (name === "phoneNumber") {
-      if (!value.includes("+234")) {
+      if (value.includes("+234") || isNaN(value)) {
         setErrors((prevErrors) => ({
           ...prevErrors,
           phoneNumber: "Invalid Format*",
@@ -81,7 +81,7 @@ const Signup = () => {
     if (email.length === 0) {
       newErrors.email = "Required*";
     }
-    if (phoneNumber.length == 0) {
+    if (phoneNumber.length === 0) {
       newErrors.phoneNumber = "Required*";
     }
 
@@ -102,7 +102,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="form-container col-10 offset-1  col-md-4 offset-md-4">
+    <div className="form-container col-12  col-md-8 offset-md-2 col-lg-4 offset-lg-4">
       <div className="first text-center mt-4">
         <img className="mb-4" src={mobileImg} alt="" height={120} />
         <h2 className="create mb-5">Create Your account</h2>
@@ -165,15 +165,18 @@ const Signup = () => {
             <label className="label d-block" htmlFor="">
               Phone Number
             </label>
+            <div className="toolkit-con">
+            <span className="toolkit">+234</span>
             <input
               className={`form-control ${errors.phoneNumber ? "error" : ""}`}
-              type="text"
+              type="tel"
               id="phoneNumber"
               name="phoneNumber"
               placeholder="818 000 0000"
               value={phoneNumber}
               onChange={handleChange}
             />
+            </div>
             {errors.phoneNumber && (
               <label className="label1 text-danger">{errors.phoneNumber}</label>
             )}
@@ -246,11 +249,11 @@ const Signup = () => {
           </div>
 
           <div className="mb-3">
-            <input type="checkbox" />
-            <label htmlFor="">Keep me signed in</label>
+            <input type="checkbox" id="sign"/>
+            <label htmlFor="sign" className="sign">Keep me signed in</label>
           </div>
 
-          <div className="btn1 text-center mb-4">
+          <div className="btn1 text-center  mt-4">
             <button className="btn-create">Create Your Account</button>
           </div>
         </form>
