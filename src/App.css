@@ -176,3 +176,16 @@ input[type="checkbox"] {
   display: inline-block;
   transform: scale(1.5);
 }
+.body {
+  align-items: center;
+  color: green;
+}
+.modal-cont {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 31px;
+
+  color: rgba(0, 0, 0, 0.82);
+}

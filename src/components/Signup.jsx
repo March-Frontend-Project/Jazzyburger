@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Modal, Button } from "react-bootstrap";
 import mobileImg from "../assets/mobile/image 4.png";
 
 const Signup = () => {
@@ -14,6 +15,7 @@ const Signup = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [passwordVisible1, setPasswordVisible1] = useState(false);
   const [errors, setErrors] = useState({});
+  const [showModal, setShowModal] = useState(false); //for controlling modal visibility
 
   const handleTogglePassword = () => {
     setPasswordVisible(!passwordVisible);
@@ -55,7 +57,7 @@ const Signup = () => {
       }
     }
 
-    if (user.password !== user.confirmPassWord) {
+    if (name === "confirmPassWord" && value !== user.password) {
       setErrors((prevErrors) => ({
         ...prevErrors,
         confirmPassWord: "Passwords do not match*",
@@ -93,12 +95,22 @@ const Signup = () => {
         "Confirm password should be at least 8 characters*";
     }
 
+    if (confirmPassWord !== password) {
+      newErrors.confirmPassWord = "Passwords do not match*";
+    }
+
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
     } else {
-      // Perform your form submission logic here
-      console.log(user);
+      // Clear errors and show the modal
+      setErrors({});
+      setShowModal(true);
     }
+  };
+
+  const handleCloseModal = () => {
+    // Close the modal
+    setShowModal(false);
   };
 
   return (
@@ -108,166 +120,186 @@ const Signup = () => {
         <h2 className="create mb-5">Create Your account</h2>
       </div>
       <div className="cont col-md-10 col-10 offset-1 offset-md-1">
-        <form onSubmit={handleSubmit}>
-          <div className="label mb-3">
-            <label className="label d-block" htmlFor="">
-              First name
-            </label>
-            <input
-              className={`form-control ${errors.firstName ? "error" : ""}`}
-              type="text"
-              id="firstName"
-              name="firstName"
-              placeholder="First Name"
-              value={firstName}
-              onChange={handleChange}
-            />
+        {/* <form onSubmit={handleSubmit}> */}
+        <div className="label mb-3">
+          <label className="label d-block" htmlFor="">
+            First name
+          </label>
+          <input
+            className={`form-control ${errors.firstName ? "error" : ""}`}
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder="First Name"
+            value={firstName}
+            onChange={handleChange}
+          />
 
-            {errors.firstName && (
-              <label className="label1 text-danger">{errors.firstName}</label>
-            )}
-          </div>
-          <div className="mb-3">
-            <label className="label d-block" htmlFor="">
-              Last name
-            </label>
-            <input
-              className={`form-control ${errors.lastName ? "error" : ""}`}
-              type="text"
-              id="lastName"
-              name="lastName"
-              placeholder="Last Name"
-              value={lastName}
-              onChange={handleChange}
-            />
-            {errors.lastName && (
-              <label className="label1 text-danger">{errors.lastName}</label>
-            )}
-          </div>
-          <div className="mb-3">
-            <label className="label d-block" htmlFor="">
-              Email
-            </label>
-            <input
-              className={`form-control ${errors.email ? "error" : ""}`}
-              type="text"
-              id="email"
-              name="email"
-              placeholder="example@mail.com"
-              value={email}
-              onChange={handleChange}
-            />
-            {errors.email && (
-              <label className="label1 text-danger">{errors.email}</label>
-            )}
-          </div>
-          <div className="mb-3">
-            <label className="label d-block" htmlFor="">
-              Phone Number
-            </label>
+          {errors.firstName && (
+            <label className="label1 text-danger">{errors.firstName}</label>
+          )}
+        </div>
+        <div className="mb-3">
+          <label className="label d-block" htmlFor="">
+            Last name
+          </label>
+          <input
+            className={`form-control ${errors.lastName ? "error" : ""}`}
+            type="text"
+            id="lastName"
+            name="lastName"
+            placeholder="Last Name"
+            value={lastName}
+            onChange={handleChange}
+          />
+          {errors.lastName && (
+            <label className="label1 text-danger">{errors.lastName}</label>
+          )}
+        </div>
+        <div className="mb-3">
+          <label className="label d-block" htmlFor="">
+            Email
+          </label>
+          <input
+            className={`form-control ${errors.email ? "error" : ""}`}
+            type="text"
+            id="email"
+            name="email"
+            placeholder="example@mail.com"
+            value={email}
+            onChange={handleChange}
+          />
+          {errors.email && (
+            <label className="label1 text-danger">{errors.email}</label>
+          )}
+        </div>
+        <div className="mb-3">
+          <label className="label d-block" htmlFor="">
+            Phone Number
+          </label>
 
-            <input
-              className={`form-control ${errors.phoneNumber ? "error" : ""}`}
-              type="tel"
-              id="phoneNumber"
-              name="phoneNumber"
-              placeholder="818 000 0000"
-              value={phoneNumber}
-              onChange={handleChange}
-            />
-            <div className="toolkit-con">
-              <button
-                className="toolkit"
-                type="button"
-                disabled
-                aria-label="Disabled button"
-              >
-                <span>+234</span>
-              </button>
-            </div>
-
-            {errors.phoneNumber && (
-              <label className="label1 text-danger">{errors.phoneNumber}</label>
-            )}
-          </div>
-          <div className="mb-3 login">
-            <label className="label d-block" htmlFor="">
-              Password (8 character minimum)
-            </label>
-            <input
-              className={`form-control ${errors.password ? "error" : ""}`}
-              type={passwordVisible ? "text" : "password"}
-              id="password"
-              name="password"
-              placeholder="Password"
-              value={password}
-              onChange={handleChange}
-            />
-
+          <input
+            className={`form-control ${errors.phoneNumber ? "error" : ""}`}
+            type="tel"
+            id="phoneNumber"
+            name="phoneNumber"
+            placeholder="818 000 0000"
+            value={phoneNumber}
+            onChange={handleChange}
+          />
+          <div className="toolkit-con">
             <button
-              className="btn-password"
-              onClick={handleTogglePassword}
-              aria-label={passwordVisible ? "Hide password" : "Show password"}
+              className="toolkit"
+              type="button"
+              disabled
+              aria-label="Disabled button"
             >
-              <i
-                className={`fa fa-sharp fa-light ${
-                  passwordVisible ? "fa-eye" : "fa-eye-slash"
-                }`}
-              ></i>
+              <span>+234</span>
             </button>
           </div>
-          <div className="er">
-            {errors.password && (
-              <label className="label3 text-danger">{errors.password}</label>
-            )}
-          </div>
-          <div className="mb-3 login">
-            <label className="label d-block" htmlFor="">
-              Confirm Password
-            </label>
-            <input
-              className={`form-control ${
-                errors.confirmPassWord ? "error" : ""
+
+          {errors.phoneNumber && (
+            <label className="label1 text-danger">{errors.phoneNumber}</label>
+          )}
+        </div>
+        <div className="mb-3 login">
+          <label className="label d-block" htmlFor="">
+            Password (8 character minimum)
+          </label>
+          <input
+            className={`form-control ${errors.password ? "error" : ""}`}
+            type={passwordVisible ? "text" : "password"}
+            id="password"
+            name="password"
+            placeholder="Password"
+            value={password}
+            onChange={handleChange}
+          />
+
+          <button
+            className="btn-password"
+            onClick={handleTogglePassword}
+            aria-label={passwordVisible ? "Hide password" : "Show password"}
+          >
+            <i
+              className={`fa fa-sharp fa-light ${
+                passwordVisible ? "fa-eye" : "fa-eye-slash"
               }`}
-              type={passwordVisible1 ? "text" : "password"}
-              id="confirmPassWord"
-              name="confirmPassWord"
-              placeholder="Confirm Password"
-              value={confirmPassWord}
-              onChange={handleChange}
-            />
+            ></i>
+          </button>
+        </div>
+        <div className="er">
+          {errors.password && (
+            <label className="label3 text-danger">{errors.password}</label>
+          )}
+        </div>
+        <div className="mb-3 login">
+          <label className="label d-block" htmlFor="">
+            Confirm Password
+          </label>
+          <input
+            className={`form-control ${errors.confirmPassWord ? "error" : ""}`}
+            type={passwordVisible1 ? "text" : "password"}
+            id="confirmPassWord"
+            name="confirmPassWord"
+            placeholder="Confirm Password"
+            value={confirmPassWord}
+            onChange={handleChange}
+          />
 
-            <button
-              className="btn-password"
-              onClick={handleTogglePassword1}
-              aria-label={passwordVisible1 ? "Hide password" : "Show password"}
-            >
-              <i
-                className={`fa fa-sharp fa-light ${
-                  passwordVisible1 ? "fa-eye" : "fa-eye-slash"
-                }`}
-              ></i>
-            </button>
-          </div>
-          <div className="er">
-            {errors.confirmPassWord && (
-              <label className="label2 text-danger">
-                {errors.confirmPassWord}
-              </label>
-            )}
-          </div>
-
-          <div className="mb-3">
-            <input type="checkbox" />
-            <label className="keep" htmlFor="">
-              Keep me signed in
+          <button
+            className="btn-password"
+            onClick={handleTogglePassword1}
+            aria-label={passwordVisible1 ? "Hide password" : "Show password"}
+          >
+            <i
+              className={`fa fa-sharp fa-light ${
+                passwordVisible1 ? "fa-eye" : "fa-eye-slash"
+              }`}
+            ></i>
+          </button>
+        </div>
+        <div className="er">
+          {errors.confirmPassWord && (
+            <label className="label2 text-danger">
+              {errors.confirmPassWord}
             </label>
-          </div>
+          )}
+        </div>
 
-          <div className="btn1 text-center mb-4">
-            <button className="btn-create">Create Your Account</button>
-          </div>
-        </form>
+        <div className="mb-3">
+          <input type="checkbox" />
+          <label className="keep" htmlFor="">
+            Keep me signed in
+          </label>
+        </div>
+
+        <div className="btn1 text-center mb-4">
+          <button className="btn-create" onClick={handleSubmit}>
+            Create Your Account
+          </button>
+        </div>
+
+        {/* Modal */}
+        <Modal
+          className="modal-cont"
+          show={showModal}
+          onHide={handleCloseModal}
+          top
+        >
+          <Modal.Header closeButton>
+            <Modal.Title className="body text-center">Success</Modal.Title>
+          </Modal.Header>
+          <Modal.Body className="">
+            Your account has been created successfully.
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleCloseModal}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+        {/* </form> */}
       </div>
 
       <div className="foot p-2 text-center mb-4">
