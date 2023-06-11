@@ -1,18 +1,10 @@
-*{
-    margin: 0;
-    box-sizing: border-box;
-    /* background-color: black; */
-
-}
-/* h6{
-    padding-left: 25%;
-    margin-top: 5%;
-} */
-
-.logo{
+.logo {
     width: 163.02px;
-height: 189.77px;
+    height: 189.77px;
 }
-button{
-    border-color: none;
+.cover2 a{
+    text-decoration: none;
+}
+.cover a{
+    text-decoration: none;
 }
