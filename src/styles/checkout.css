@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+.checkout-con {
+  display: flex;
+  gap: 30px;
+  height: 50vh;
+  overflow: auto;
+}
+
+.sam {
+  font-family: "Open Sans";
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: left;
+  height: auto;
+  width: 50%;
+  padding: 1rem;
+  background: #FFFFFF;
+  border: 1px solid rgba(170, 170, 170, 0.4);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.rev {
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.thed {
+  /* padding: 1rem 0; */
+  border-bottom: 1px solid #00000049;
+}
+
+.place {
+  margin-top: 2rem;
+  background-color: #0C982B;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  width: 100%;
+  font-size: 14px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  padding: 1.5%;
+}
+
+.add {
+  background-color: #000000;
+  border: none;
+  border-radius: 7px;
+  width: 270px;
+  height: 38px;
+  color: white;
+  color: white;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.flat {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+
+}
+
+.dutch {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  font-size: 25px;
+  color: #000000;
+}
+
+/* ---------------Check out order---------------------------------- */
+.cart-order-con {
+  background: #FFFFFF;
+  border: 1px solid rgba(170, 170, 170, 0.4);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  width: 50%;
+  height: 100%;
+  overflow: auto;
+  /* padding:  1rem; */
+}
+
+.cart-order-con h3 {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 752;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid #AAAAAA;
+}
+
+.cart-product-title {
+  width: 70%;
+  padding-left: 20px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 752;
+  font-size: 16px !important;
+  line-height: 22px;
+  color: #F31D1D;
+}
+
+.cart-product-amount {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: #C6C3C3;
+  padding: 0;
+  margin: 0;
+  text-align: end !important;
+  width: 100%;
+}
+
+.bin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.img-fluid {
+  height: 100%;
+  width: 100%;
+}
+
+.cart-product-desc {
+  width: 30%;
+}
+
+.cart-order-inner {
+  border-bottom: 1px solid #AAAAAA;
+}
+
+td {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: #C6C3C3;
+  padding: 2% 0;
+}
+
+tr td:nth-child(2) {
+  text-align: end;
+}
+
+.delivery {
+  padding-bottom: 0;
+}
+
+h6 {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.order-count {
+  width: 250px;
+}
+
+
+
+@media(max-width:865px) {
+  .checkout-con {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: auto;
+    overflow: auto;
+    align-items: center;
+  }
+
+  .sam,
+  .cart-order-con {
+    width: 100%;
+    background: #F9F2F2;
+    border: 1px solid rgba(170, 170, 170, 0.41);
+    box-shadow: 3px 11px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+  }
+
+}
+
+@media (max-width:678px) {
+  .sam {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .rev {
+    width: 70%;
+    height: 50%;
+  }
+
+  .dutch {
+    padding-top: none !important;
+  }
+
+  .add {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .flat {
+    font-weight: 600;
+    font-size: 20px;
+  }
+}

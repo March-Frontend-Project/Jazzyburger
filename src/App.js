@@ -1,10 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import data from "./ProductStore";
-import Card from "./component/Card";
-import background1 from "./assets/background/image 4.png";
+import Home from "./Home";
+import { Routes, Route } from "react-router-dom";
+import ViewMore from "./ViewMore";
+import LoadingPage from "./LoadingPage";
+import Signup from "./Signup";
+import Login from "./Login";
+import CheckOut from "./CheckOut";
+import Update from "./Update";
+
 function App() {
   const [products, setProducts] = useState(data);
-
+  const [cart, setCart] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const handleIncrease = (id) => {
     const newProducts = products.map((product) => {
       if (product.id === id) {
@@ -35,28 +43,76 @@ function App() {
     setProducts(newProducts);
   };
 
+  useEffect(() => {
+    const toCart = () => {
+      setCart(products.filter((product) => product.cart && product));
+    };
+    toCart();
+  }, [products]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
-    <div className="App">
-      <main className="main-section">
-        <div className="hero-section">
-          <img
-            src={background1}
-            alt="backgroung-img"
-            className="img-fluid"
-          ></img>
+    <div className="App ">
+      {isLoading && <LoadingPage />}
+      {!isLoading && (
+        <div>
+          <div>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <Home
+                    products={products}
+                    handleIncrease={handleIncrease}
+                    handleReduce={handleReduce}
+                    toCartButton={toCartButton}
+                    cart={cart}
+                  />
+                }
+              />
+              <Route
+                path="/more"
+                element={
+                  <ViewMore
+                    products={products}
+                    handleIncrease={handleIncrease}
+                    handleReduce={handleReduce}
+                    toCartButton={toCartButton}
+                    cart={cart}
+                  />
+                }
+              />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/login" element={<Login />} />
+              <Route
+                path="/checkout"
+                element={<CheckOut 
+                  cart={cart} 
+                  toCartButton={toCartButton}
+                  handleIncrease ={handleIncrease} 
+                  handleReduce ={handleReduce}
+                  />}
+              />
+              <Route
+                path="/update"
+                element={<Update
+                  cart={cart} 
+                  toCartButton={toCartButton}
+                  />}
+              />
+            </Routes>
+          </div>
         </div>
-        <div className="card-con">
-          {products.map((product) => (
-            <Card
-              product={product}
-              key={product.id}
-              handleIncrease={handleIncrease}
-              handleReduce={handleReduce}
-              toCartButton={toCartButton}
-            />
-          ))}
-        </div>
-      </main>
+      )}
     </div>
   );
 }
