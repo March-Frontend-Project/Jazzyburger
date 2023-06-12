@@ -1,8 +1,6 @@
 import React from "react";
 import Counter from "./Counter";
 import ImgGallery from "./ImgGallery";
-// import like1 from "../assets/vector-images/like.png"
-// import like2 from "../assets/vector-images/like2.png"
 
 import Cart from "./Cart";
 const Card = ({ product, handleIncrease, handleReduce, toCartButton }) => {

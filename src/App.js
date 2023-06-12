@@ -2,6 +2,7 @@ import { useState } from "react";
 import data from "./ProductStore";
 import Card from "./component/Card";
 import background1 from "./assets/background/image 4.png";
+
 function App() {
   const [products, setProducts] = useState(data);
 
