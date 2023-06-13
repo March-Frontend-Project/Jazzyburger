@@ -29,7 +29,7 @@ footer {
   font-weight: 700;
   font-size: 25.49px;
   line-height: 35px;
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
   font-style: normal;
   font-weight: 700;
   font-size: 25.49px;
@@ -39,7 +39,7 @@ footer {
 }
 
 .twenty :nth-child(2) {
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
   font-style: normal;
   font-weight: 700;
   font-size: 14.49px;
@@ -64,7 +64,7 @@ footer {
 
 
 .percent :nth-child(1) {
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
   font-style: normal;
   font-weight: 700;
   font-size: 25.49px;
@@ -74,7 +74,7 @@ footer {
 }
 
 .percent :nth-child(2) {
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
   font-style: normal;
   font-weight: 700;
   font-size: 14.49px;
@@ -124,7 +124,7 @@ footer {
   font-size: 17px;
   line-height: 23px;
   margin-top: 5%;
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
   font-style: normal;
   font-weight: 700;
   font-size: 19.49px;
@@ -187,7 +187,7 @@ small {
 }
 
 .help-link h1 {
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
   font-style: normal;
   font-weight: 700;
   font-size: 19.49px;
@@ -225,7 +225,7 @@ small {
 }
 
 .link {
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
   font-style: normal;
   font-weight: 700;
   font-size: 9.49px;
@@ -299,7 +299,7 @@ small {
 
   .dwnld-text {
     width: 185px;
-    font-family: 'Open Sans';
+    /* font-family: 'Open Sans'; */
     font-style: normal;
     font-weight: 700;
     font-size: 25.49px;

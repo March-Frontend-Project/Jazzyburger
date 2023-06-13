@@ -8,9 +8,9 @@ import Footer2 from './component/Footer2';
 
 const Home = ({ products,handleIncrease,handleReduce,toCartButton,cart }) => {
   return (
-    <div>
+    <div className=''>
       <Header cart={cart} toCartButton={toCartButton} />
-    <main className="container-lg">
+    <main className="container">
         <div className='hero-banner'>
             <img src={heroBanner} alt="...Banner" className='img-fluid' />
         </div>

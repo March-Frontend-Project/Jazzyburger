@@ -9,7 +9,7 @@ const Card = ({ product, handleIncrease, handleReduce, toCartButton}) => {
       <Favourite/>
       <img src={product.image} className="card-img-top " alt="..." />
       <div className="card-body">
-        <h5 className="card-title">{product.title}</h5>
+        <h2 className="card-title">{product.title}</h2>
         <div className="d-flex justify-content-between align-items-center">
           <div className="d-flex-column">
             <p class="price">Total Price</p>

@@ -10,7 +10,7 @@
   }
   
   .view-more .card {
-    font-family: "open sans";
+    /* font-family: "open sans"; */
     width: 22%;
     position: relative;
     border-radius: 20px;
@@ -18,9 +18,9 @@
   }
   
   .view-more .card-title {
-    font-family: "Open Sans";
+    /* font-family: "Open Sans"; */
     font-weight: bold;
-    font-size: 11px;
+    font-size: 16px;
     margin-bottom: 2%;
     margin-top: 2%;
   }
@@ -30,7 +30,7 @@
   }
   
   .view-more .price {
-    font-family: 'Open Sans';
+    /* font-family: 'Open Sans'; */
 font-style: normal;
 font-weight: 600;
 font-size: 12px;
@@ -48,7 +48,7 @@ color: #000000;
   }
 
   .view-more .card-title:nth-child(2){
-    font-family: 'Open Sans';
+    /* font-family: 'Open Sans'; */
 font-style: normal;
 font-weight: 600;
 font-size: 12px;

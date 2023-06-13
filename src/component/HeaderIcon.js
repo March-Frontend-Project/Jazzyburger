@@ -12,7 +12,7 @@ const HeaderIcon = () => {
         </div>
         <div className='d-lg-flex gap-3 flex-grow-1 d-none'>
         <div className="">
-            <img src={mapLogo} alt="map-icon" />
+            <img src={mapLogo} alt="map-icon" style={{width:"20px"}}/>
         </div>
         <div>
             <p>Lagos, Nigeria</p>

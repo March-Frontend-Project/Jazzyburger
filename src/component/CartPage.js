@@ -12,7 +12,7 @@ const CartPage = ({ cart, toCartButton }) => {
         <div className="cart-img-con">
           <label htmlFor="cart-icon">
             <span className="cart-badge">{cart.length}</span>
-            <img src={cartIcon} alt="cart-icon" className="" />
+            <img src={cartIcon} alt="cart-icon" className="" style={{width:"20px", marginRight:"15px"}} />
           </label>
           <input type="checkbox" id="cart-icon" className="d-none" />
           <div className="cart-order">

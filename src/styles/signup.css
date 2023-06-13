@@ -25,7 +25,7 @@ a {
 .create {
   left: calc(50% - 260px/2 + 23.98px);
   top: 238.81px;
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
   font-style: normal;
   font-weight: 700;
   font-size: 25px;
@@ -35,7 +35,7 @@ a {
 
 .label {
   color: #878787;
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
   font-style: normal;
   font-weight: 700;
   font-size: 13px;
@@ -46,7 +46,7 @@ a {
 
 input {
 
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
   font-style: normal;
   font-weight: 700 !important;
   font-size: 13px;
@@ -55,7 +55,7 @@ input {
 }
 
 input::placeholder {
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
   font-style: normal;
   font-weight: 700;
   opacity: 0.5 !important;
@@ -70,7 +70,7 @@ input::placeholder {
 
 .btn-create {
   width: 100%;
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
   font-style: normal;
   font-weight: 600;
   color: #FFFFFF;
@@ -129,7 +129,7 @@ input[type="tel"] {
 .toolkit {
   position: absolute;
   top: 0px;
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
@@ -150,7 +150,7 @@ input[type="checkbox"] {
 }
 
 .sign {
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
   font-style: normal;
   font-weight: 600 !important;
   font-size: 17px;
@@ -159,7 +159,7 @@ input[type="checkbox"] {
 }
 
 .foot p {
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
   font-style: normal;
   font-weight: 600;
   font-size: 17px;
@@ -175,7 +175,7 @@ input[type="checkbox"] {
 }
 
 .reset-password{
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
 font-style: normal;
 font-weight: 600;
 font-size: 17px;
